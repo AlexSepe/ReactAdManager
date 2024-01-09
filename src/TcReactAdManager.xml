@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="truechange.tcreactadmanager.TcReactAdManager" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+<widget id="truechange.tcreactadmanager.TcReactAdManager" pluginWidget="true" needsEntityContext="false" offlineCapable="false"
         supportedPlatform="Web"    
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
@@ -21,7 +21,7 @@
                 <description>The refreshTimer prop defines how often the ad are updated. The prop is set in milliseconds.</description>
                 <returnType type="Integer" />
             </property>
-            <property key="sizeArray" type="textTemplate" required="true" >
+            <property key="sizeArray" type="textTemplate" required="true" multiline="true">
                 <caption>Size Array</caption>
                 <description>Array String with size parameters:: SingleSize | MultiSize | ResponsiveSize see https://support.google.com/admanager/answer/1100453?hl=en
 Example: [[770, 90], [728, 90]]
