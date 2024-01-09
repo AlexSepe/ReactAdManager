@@ -67,3 +67,6 @@ Gpt Demo -> https://googleads.github.io/google-publisher-tag-samples/ad-sizes/js
 ## Screenshots
 ![image](https://github.com/AlexSepe/ReactAdManager/assets/7504214/623f3c07-3572-4ab5-b827-033b324072bd)
 
+![image](https://github.com/AlexSepe/ReactAdManager/assets/7504214/bf730d68-12d5-4ca3-a538-6d6b00a1d669)
+
+
