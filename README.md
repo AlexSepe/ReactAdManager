@@ -1,14 +1,46 @@
 ## TcReactAdManager
-[TrueChange React Ad Manager wrapper https://socket.dev/npm/package/react-ad-manager]
+TrueChange React Ad Manager wrapper
+
+Este widget implementa um wrapper do component React-Ad-Manager, permitindo que possamos incluir AdUnits dinamicamente em Apps Mendix.
+Testado e funcional para Apps Web!
+
+Referencias:
+
+react-ad-manager: https://socket.dev/npm/package/react-ad-manager
+
+Google Publisher Tags: https://developers.google.com/publisher-tag/guides/get-started?hl=en
+
+Supported ad sizes
+Maximize ad performance by choosing top-performing ad sizes: https://support.google.com/admanager/answer/1100453?hl=en
 
 ## Features
-[feature highlights]
+
+* Inclusão de varios AdUnit Slots na mesma página
+* Configurações por Expressão permitindo uso estático ou atribitos
+* Configuração dinamica de tamanhos do AdUnit utilizando JSON.parse (desta forma podemos utilizar parte do JS preconfigurado nos sites GPT ou outros)
+
 
 ## Usage
-[step by step instructions]
+1) Incluir o Google Publisher Tags script na pagina index.html do projeto Mendix. (ou equivalente index3.html etc) 
+Este ponto é requerido pois o gpt deve estar com o DOM inicializado antes do React injetar os componentes.
+<head>
+  <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+</head>
+
+2) Incluir o widget TcReactAdManager na página mendix a ser exibido
+3) Configurar o widget :
+* Ad unit -> Deve conter a unit path previamente criada no Google AdManager
+* Slot Name -> Opcional, identifica o div do slot na api do gpt. Caso não informado é gerado automaticamente pelo widget
+* Refresh Timer -> Opcional, Indica em milesegundos o intervalo para que o Ad seja atualizado (indicado minimo de 60000 = 1 minuto)
+* Size Array -> Deve conter uma string com conteudo json de arrays válidos para o GPT
+  
+Sample:[ [[1024, 768], [[970, 90], [728, 90]]], [[640, 480], [[300, 50]]], [[0,0],[]] ]
 
 ## Demo project
-[link to sandbox]
+[[link to sandbox]](https://reactaddmanagertest-sandbox.mxapps.io/)
+
+React Demo -> https://playcode.io/1595092
+Gpt Demo -> https://googleads.github.io/google-publisher-tag-samples/ad-sizes/js/demo.html
 
 ## Issues, suggestions and feature requests
 [link to GitHub issues]
@@ -22,3 +54,6 @@
     - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
 
 [specify contribution]
+
+## Screenshots
+![image](https://github.com/AlexSepe/ReactAdManager/assets/7504214/623f3c07-3572-4ab5-b827-033b324072bd)
