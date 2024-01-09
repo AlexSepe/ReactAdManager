@@ -4,7 +4,8 @@
  * @author Mendix Widgets Framework Team
  */
 import { CSSProperties } from "react";
-import { DynamicValue } from "mendix";
+import { ActionValue, DynamicValue } from "mendix";
+import { Big } from "big.js";
 
 export interface TcReactAdManagerContainerProps {
     name: string;
@@ -12,8 +13,10 @@ export interface TcReactAdManagerContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     adUnit: DynamicValue<string>;
-    refreshTimer: number;
+    slotName?: DynamicValue<string>;
+    refreshTimer?: DynamicValue<Big>;
     sizeArray: DynamicValue<string>;
+    eventImpressionViewable?: ActionValue;
 }
 
 export interface TcReactAdManagerPreviewProps {
@@ -26,6 +29,8 @@ export interface TcReactAdManagerPreviewProps {
     styleObject?: CSSProperties;
     readOnly: boolean;
     adUnit: string;
-    refreshTimer: number | null;
+    slotName: string;
+    refreshTimer: string;
     sizeArray: string;
+    eventImpressionViewable: {} | null;
 }

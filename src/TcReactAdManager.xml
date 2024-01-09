@@ -12,19 +12,28 @@
                 <caption>Ad unit</caption>
                 <description>Ad unit path loaded from Google Ad Manager.</description>
             </property>
-            <property key="refreshTimer" type="integer" required="true" defaultValue="0">
+            <property key="slotName" type="textTemplate" required="false">
+                <caption>Slot Name</caption>
+                <description>Unique slot name. Used to identify de Ad Unit DIV render slot. (Optional)</description>
+            </property>
+            <property key="refreshTimer" type="expression" required="false">
                 <caption>RefreshTimer</caption>
                 <description>The refreshTimer prop defines how often the ad are updated. The prop is set in milliseconds.</description>
+                <returnType type="Integer" />
             </property>
-
             <property key="sizeArray" type="textTemplate" required="true" >
                 <caption>Size Array</caption>
                 <description>Array String with size parameters:: SingleSize | MultiSize | ResponsiveSize see https://support.google.com/admanager/answer/1100453?hl=en
 Example: [[770, 90], [728, 90]]
                 </description>
             </property>
-            
-            
+        </propertyGroup>
+
+        <propertyGroup caption="Events">
+            <property key="eventImpressionViewable" type="action" required="false">
+                <caption>eventImpressionViewable</caption>
+                <description>Action to trigger when Slot Impression is Visible</description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>
