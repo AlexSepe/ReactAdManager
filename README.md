@@ -1,8 +1,8 @@
 
 ## TcReactAdManager
-TrueChange React Ad Manager wrapper
+TrueChange React Ad Manager 
 
-Este widget implementa um wrapper do component React-Ad-Manager, permitindo que possamos incluir AdUnits dinamicamente em Apps Mendix.
+Este widget implementa o component React-Ad-Manager, permitindo que possamos incluir AdUnits dinamicamente em Apps Mendix.
 Testado e funcional para Apps Web!
 
 Referencias:
