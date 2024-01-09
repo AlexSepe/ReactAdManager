@@ -23,11 +23,11 @@ Maximize ad performance by choosing top-performing ad sizes: https://support.goo
 
 ## Usage
 1) Incluir o Google Publisher Tags script na pagina index.html do projeto Mendix. (ou equivalente index3.html etc) 
-Este ponto é requerido pois o gpt deve estar com o DOM inicializado antes do React injetar os componentes.
-o
-<head>
-  <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
-</head>
+Este ponto é requerido pois o gpt deve estar com o DOM inicializado antes do React injetar os componentes.    
+
+> <head>
+>   <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js' ></script>
+> </head>
 
 2) Incluir o widget TcReactAdManager na página mendix a ser exibido
 Atributos do widget :
@@ -35,21 +35,21 @@ Atributos do widget :
 * **Slot Name** -> Opcional, identifica o div do slot na api do gpt. Caso não informado é gerado automaticamente pelo widget
 * **Refresh Timer** -> Opcional, Indica em milesegundos o intervalo para que o Ad seja atualizado (indicado minimo de 60000 = 1 minuto)
 * **Size Array** -> Deve conter uma string com conteudo json de arrays válidos para o GPT
-  
-Sample:[ [[1024, 768], [[970, 90], [728, 90]]], [[640, 480], [[300, 50]]], [[0,0],[]] ]
+
+Sample:   
+> [ [[1024, 768], [[970, 90], [728, 90]]], [[640, 480], [[300, 50]]], [[0,0],[]] ]
 
 3)  Concluído! 
 
 **NOTAS** 
 
 Google só exibirá os Ads no site real configurado no AdManager!
-Localhost não funciona nem para o AdUnit "emulado"! 
-Requer uma freeapp, ngrok ou deploy para ambientes para visualizar os Divs demo!
+Localhost ou ambientes hml será exibido um AdUnit "emulado"! 
 
 ## Demo project
-React Add Manager Test sandbox -> https://reactaddmanagertest-sandbox.mxapps.io/
+`React Add Manager Test sandbox` -> https://reactaddmanagertest-sandbox.mxapps.io/
 
-Gpt Demo -> https://googleads.github.io/google-publisher-tag-samples/ad-sizes/js/demo.html
+`Gpt Demo` -> https://googleads.github.io/google-publisher-tag-samples/ad-sizes/js/demo.html
 
 ## Issues, suggestions and feature requests
 [link to GitHub issues]
